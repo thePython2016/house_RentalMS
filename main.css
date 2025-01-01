@@ -1,0 +1,378 @@
+div .title{
+    color:white;
+    font-weight: bold;
+}
+div .enrolled-student{
+    background: #f5a425;
+    height:150px;
+    color:white;
+}
+div .current-staff{
+    background:#a2dd43;
+    height:150px;
+    color:white;
+}
+div .current-staff p{
+   
+    color:white;
+}
+div .enrolled-student p{
+   
+    color:white;
+}
+div .fees-accumulation{
+    background:#98bf64;
+    height:150px;
+    color:white;
+    height:150px;
+ 
+}
+div .fees-accumulation p{
+
+    color:white;
+ 
+}
+.sidebar-wrapper,.logo-header{
+    background-color:#007083;
+    color:white;
+}
+.sidebar-wrapper,.logo-header h3{
+  
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div ul li a p{
+    color:white;
+}
+div ul li .test:hover{
+    color:white;
+    background-color:red;
+}
+div ul li:visited{
+    color:white;
+    background-color:#EB8921;
+}
+
+div ul li a:link{
+
+   color:white !important;
+    font-size: 20px;
+}
+
+div ul li a i{
+
+    color:white !important;
+}
+i{
+    color:white;
+    font-size:90px;
+}
+toogle .sidebar-wrapper .sidebar-content .nav .nav-item {
+    color:red !important;
+    background-color: #007083;
+}
+.sidebar-wrapper .sidebar-content .nav .nav-item ul li{
+    color:white !important;
+    background-color: #007083;
+}
+.sidebar-wrapper .sidebar-content .nav .nav-item p :hover{
+    color:red !important;
+    background-color: #007083;
+}
+.sidebar-wrapper .sidebar-content .nav .nav-item a:visited{
+    color:white !important;
+    
+}
+/* Critical */
+.sidebar-content .nav .nav-item a:hover{
+    color:white !important;
+    background-color: #EB8921;
+}
+.sidebar-content .nav .nav-item a{
+    color:white !important;
+  margin-top:0px;
+ 
+}
+
+.sidebar-wrapper .sidebar-content .nav .nav-item  div .submenu{
+  
+
+  list-style-type:none !important;
+
+  padding-top: 0;
+ 
+}
+div ul li ul.a{
+    list-style-type: none;
+}
+div ul li div ul li a .sub-item{
+    margin-left:8px;
+}
+li .avatar-sm{
+    margin-right:10px;
+}
+div .btn-payment,.btn-student{
+    background:#EB8921;
+    color:white;
+}
+div .btn-payment,.btn-student{
+    background:#EB8921;
+    color:white;
+}
+div .search-form{
+
+margin-left:30px;
+}
+div .salary-card{
+    background:#007083;
+    color:white;
+}
+.table-header{
+    background:#007083;
+}
+div .profile-details{
+    margin-right:30px;
+}
+div .view-profile{
+    background:#007083;
+}
+div .view-profile:hover{
+    background:#007083;
+}
+div .enrolled-student-card{
+    display:flex;
+    flex-direction: row;
+}
+div ul li a .account-setting-icon{
+    color:black;
+}
+
+/*----Profile form CSS...*/
+ .profile-form-wrapper .user-profile-form{
+    margin-top:10px;
+    margin-bottom:10px;
+ 
+}
+.card-body .profile-form-wrapper .user-profile-form{
+   
+   width:300px;
+  margin:auto;
+  margin-bottom:30px;
+ 
+}
+.card-body .profile-form-wrapper .user-profile-form label{
+   
+    width:300px;
+   margin:auto;
+   margin-bottom:0px;
+ }
+ div .profile-block{
+    background-color: rgb(248, 245, 245);
+ }
+ .card-body .profile-form-wrapper .user-profile-form button{
+   
+ background-color:  #007083;
+ color:white;
+ }
+ .card-body .profile-form-wrapper .user-profile-form form .submit-button :hover{
+   
+    background-color:  red;
+    color:white;
+    }
+
+    /*----Sudent form CSS---*/
+    .student-form-wrapper .student-form{
+        margin-top:10px;
+        margin-bottom:10px;
+     
+    }
+    .card-body .student-form-wrapper .student-form{
+       
+       width:300px;
+        margin:auto;
+      margin-bottom:30px;
+      margin-right:300px;
+     
+    }
+    .card-body .student-form-wrapper .student-form label{
+       
+        width:300px;
+       margin:auto;
+       margin-bottom:0px;
+     }
+     div .student-block{
+        background-color: rgb(248, 245, 245);
+        margin-bottom: 20px;
+     }
+     .card-body .student-form-wrapper .student-form button{
+       
+     background-color:  #007083;
+     color:white;
+     margin-bottom: 10px;
+     }
+       .card-body .student-form-wrapper .student-form button{
+       
+     background-color:  #007083;
+     color:white;
+     margin-bottom: 10px;
+     }
+     .card-body .student-form-wrapper .student-form form .submit-button :hover{
+       
+        background-color:  red;
+        color:white;
+        }
+        .card-body .student-form-wrapper .student-form .staff-row-one{
+    display:flex;
+    flex-direction: row;
+}
+
+.card-body .student-form-wrapper .student-form .student-row-one{
+display:flex;
+flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .student-row-one .star{
+ color:red;
+ font-size:15px;
+ padding-right:3px;
+    }
+.card-body .student-form-wrapper .student-form .student-row-one .star{
+ color:red;
+ font-size:15px;
+ padding-right:3px;
+    }
+.card-body .student-form-wrapper .student-form .student-row-one .star{
+        color:red;
+        font-size:15px;
+        padding-right:2px;
+           }
+ .card-body .student-form-wrapper .student-form .student-row-two .star{
+            color:red;
+            font-size:15px;
+            padding-right:3px;
+               }
+.card-body .student-form-wrapper .student-form .student-row-three .star{
+                color:red;
+                font-size:15px;
+                padding-right:3px;
+                   }
+ .card-body .student-form-wrapper .student-form .student-row-four .star{
+                    color:red;
+                    font-size:15px;
+                    padding-right:3px;
+                       }
+  .card-body .student-form-wrapper .student-form .full-name-label .star{
+                        color:red;
+                        font-size:15px;
+                        padding-right:3px;
+                           }
+.card-body .student-form-wrapper .student-form .student-row-two{
+display:flex;
+flex-direction: row;
+}
+
+.card-body .student-form-wrapper .student-form .student-row-three{
+display:flex;
+flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .student-row-four{
+    display:flex;
+    flex-direction: row;
+    }
+.card-body .student-form-wrapper .student-form .staff-row-two{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .staff-row-three{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .staff-row-four{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .staff-row-one-1{
+    display:flex;
+    flex-direction: column;
+}
+.card-body .student-form-wrapper .student-form .payment-form-row1{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .payment-form-row2{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .staff-row-1-2{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .exam-row-one{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .exam-row-two{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .exam-row-three{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .exam-row-four{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .first-last-name-fields{
+    display:flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .first-last-name-fields #field-id{
+ margin-right:10px;
+}
+.card-body .student-form-wrapper .student-form  #field-id{
+ width:250px;
+}
+.main-header  .profile-username {
+    color:black;
+   
+}
+.main-header a:hover{
+    color:black;
+  
+   
+}
+.payment-form-tab #id-field{
+    width:100px;
+
+}
+.nav-tabs > li > button{
+    color:white;
+    background-color:#007083;
+    padding:5px;
+}
+.nav-tabs > li > button:hover{
+    color:white;
+    background-color: #007083;
+
+}
+div .mandatory{
+    color:red;
+    margin-left:250px;
+    font-size:16px;
+}
+.card-body .student-form-wrapper .student-form .day-mon-year{
+    display: flex;
+    flex-direction: row;
+}
+.card-body .student-form-wrapper .student-form .day-mon-year #dob{
+    width:70px;
+    }
+        
+.card-body .student-form-wrapper .student-form .day-mon-year #dob-mon{
+width:100px;
+}
+    
+    
+    

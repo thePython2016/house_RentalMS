@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .bgColorbody{
+    background:#4acbd6 !important;
+  }
+  
+  /* Menu */
+  .menu-vertical{
+    background-color: #4acbd6 !important;
+  }
+  .menu-vertical ul li a{
+    background-color: #4acbd6  !important;
+  
+    color:white !important;
+    padding-top:10px !important;
+  }
+  .menu-vertical ul li ul li  :hover{
+    background-color: hsl(48, 4%, 23%)  !important;
+    color:white !important;
+  }
+
+  .menu-vertical .title-text{
+    text-transform: uppercase !important;
+    text-align: center !important;
+    margin-left:  40px !important;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .menu-vertical .font-icon{
+padding-right:10px !important;
+  }
+  /* ICONS DASHBOARD */
+  /* Tenants block */
+  .tenants-block{
+    height:190px !important;
+    background-color: #1E2761  !important;
+  
+   
+  }
+  .tenants-block .tenants-text1{
+   padding-top:10px;
+   margin-left:100px;
+   font-size:20px;
+   color:white;
+    
+  }
+  .tenants-block .tenants-text2{
+ 
+    margin-left:100px;
+    font-size:20px;
+    color:white;
+     
+   }
+  .tenants-block h4{
+    color:white !important;
+   
+  }
+  .tenants-icon{
+    width:100px !important;
+    height:100px !important;
+  
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+   
+  }
+  /* Houses block */
+  .houses-block{
+    background-color: #7A2048;
+
+    height:190px !important;
+  }
+  .houses-block .houses-icon{
+    width:50px !important;
+    height:50px !important;
+    margin-left:20px !important;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+
+  }
+  .houses-block .houses-text{
+    color:white !important;
+    padding-top:20px !important;
+    text-align:center !important;
+    
+
+  }
+  .houses-block .houses-numbertext{
+    color:white !important;
+    padding-left:40px !important;
+    
+
+  }
+  /* Annual Collection */
+  .annual-collectionBlock{
+    background-color:#FFBB00;
+    color:white !important;
+    height:190px !important;
+  
+  }
+  .annual-collectionBlock .annual-collection{
+    width:50px !important;
+    height:50px !important;
+    margin-left:20px !important;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(152deg) brightness(103%) contrast(103%);
+ 
+  }
+  .annual-collectionBlock .annual-collectionText{
+    color:white !important;
+    padding-top:20px !important;
+    text-align:center !important;
+    /* background-color: rgb(219, 216, 216); */
+ 
+   
+ 
+  }
+  .annual-collectionBlock .annual-collectionnumbertext{
+    color:white !important;
+    padding-left:15px !important;
+ 
+  }
+  /* Houses Page */
+  .addBtn{
+    background-color: hsl(48, 4%, 23%)  !important;
+    color:white !important;
+    b
+  }
+  
+  .accordion-button::after{
+    margin-left:10px !important;
+ 
+
+  }
+  .accordion-button::after{
+    margin-left:10px !important;
+
+  
+  }
+  .formBackground{
+    background:#4acbd6  !important;
+  }
+  #houseNumber, #region, #district, #address, #attachment,#rental,#fee{
+    width:300px !important;
+  }
+  #region, #address{
+    margin-right:10px !important;
+  }
+  /* Accordion  */
+  
+  .accordion-body {
+    position: -webkit-sticky;
+    position: sticky;
+    /* top: 10px; /* Adjust this value based on your needs */
+    
+  }
+  /* Tenant */
+  #tenantField{
+    width:300px !important;
+  }
+  .second-row-form{
+    display:flex !important;
+    flex-direction: row !important;
+  }
+  .third-row-form{
+    display:flex !important;
+    flex-direction: row !important;
+  }
+  .first-row-form{
+    display:flex !important;
+    flex-direction: row !important;
+  }
+ #phoneTenant,#kinPhone,#gender,#InputFirstname,#Inputdate,#InputMiddlename,#Inputemail,#InputLastname,#gender,#Inputaddress,#InputEmail,
+ #Inputcontract,#InputNumber,#NextKin{
+  width:300px !important;
+ }
+ #phoneTenant, #Inputemail,#kinPhone{
+  margin-right:10px !important;
+ }
+ #fname,#mname,#lname,#kinphone,
+ #housenumber,#startdate,#enddate,#physicaladdress,#startDate,#endDate,#amount,#contract
+ {
+  width:150px !important;
+ }
+ #InputFirstname,#InputMiddlename,#gender,#Inputaddress,#lastname,#amount,#middlename,#firstname,#physicaladdress{
+  margin-right:10px !important;
+  
+ }
+ #mname,#kinphone,#amount,#startdate,#InputEmail{
+  margin-right:10px !important;
+ }
+ /* Table background */
+ .table{
+  background:white !important;
+ }
+
+ /* TableData records/view */
+tr {
+  cursor: pointer !important;
+}
+.selected {
+  background-color: #3a9afa !important; /* Highlight selected row */
+}
+
+.dataRow:hover {
+  background-color:rgb(215, 226, 250) !important; /* Change color on hover */
+  color:white !important;
+}
+/* .tableData:hover {
+ 
+  color:white !important;
+} */
+/* tr:focus {
+  background-color:#375E97 !important; /* Change color on hover */
+/* } */ */
+#delete-button, #updateButton {
+  display: none !important; /* Hide buttons initially */
+
+} 
+.block1, .block2, .block3{
+  display: flex !important;
+  flex-direction: row !important;
+}
+/* RENTAL PAYMENT FORM */
+#startDate, #endDate,#houseNumber,#amountPaid,#tenantName{
+  width:300px !important;
+
+}
+#startDate,#tenantName{
+  margin-right:10px !important;
+}
+
+/* DATA TABLE STYLING */
+input[type='search']
+{
+  background-color: white !important;
+}
+.dt-paging{
+  display:none !important;
+}
+.dataTables_paginate {
+  display:none !important;
+}
+.dataTables_info{
+  display:none !important;
+}
+.dataTables_length{
+  margin-right:100px !important;
+}
+.hasDatepicker{
+  margin-bottom:50px !important;
+}
+.dt-buttons{
+  margin-left:220px !important;
+}
+.display{
+  margin-top:100px !important;
+}
+/* Tenant tab container */
+.tab-container{
+  float:left !important;
+  margin-bottom:20px !important;
+  width: 1000px !important;
+  border-top:none !important;
+}
+.tab-container .nav-tabs a{
+  font-size:16px !important;
+
+}
+.tab-container .nav-tabs a:hover{
+ background-color: #FFBB00 !important;
+ color:white !important;
+
+}
+.tab-container .nav-tabs a:focus{
+  background-color: #FFBB00 !important;
+  color:white !important;
+ 
+ }
+ .tab-container .nav-tabs a:active{
+  background-color: #FFBB00 !important;
+  color:white !important;
+ 
+ }
+
+.tab-container {
+    width: 80%;
+    margin: auto;
+}
+.nav-tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+.nav-tabs a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+.nav-tabs a.active {
+    border-bottom: 2px solid #007bff;
+    background-color: #e7f3ff; /* Light blue background for active tab */
+    color: #007bff;
+}
+.nav-tabs a:hover {
+    background-color: #f1f1f1; /* Background color on hover */
+}
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: none; /* Hide all content by default */
+}
+.tab-content.active {
+    display: block; /* Show the active tab content */
+}
+/* Notification badge */
+.notification-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative; /* For notification badge positioning */
+}
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #FFBB00;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 12px;
+}
