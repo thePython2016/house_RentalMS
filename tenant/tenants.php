@@ -338,7 +338,7 @@ if(!isset($_SESSION['id']))
                                   <td><?php echo $tenants['address']?></td>
                                   <td><?php echo $tenants['startDate']?></td>
                                   <td><?php echo $tenants['endDate']?></td>
-                                  <td><?php echo $tenants['amount']?></td>
+                                  <td><?php echo htmlspecialchars(rentalTenantAmount($tenants), ENT_QUOTES, 'UTF-8'); ?></td>
                                   <td><a href='<?php echo $tenants['contract']?>' download>Download</a></td>
                                  
                                   

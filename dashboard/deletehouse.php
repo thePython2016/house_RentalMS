@@ -1,23 +1,27 @@
 <?php
-
-require "dbconnection.php";
+require_once dirname(__DIR__) . '/inc/rentalDb.php';
+rentalEnsureSession();
+require 'dbconnection.php';
 
 if(isset($_GET['number'])){
 
-$id=$_GET['number'];
+$id=mysqli_real_escape_string($conn, $_GET['number'] ?? '');
+$selected = '';
   
 
 
 $regionsSelect=mysqli_query($conn,"select * from houses where houseNumber='$id'");
 foreach($regionsSelect as $selectedregion)
 {
-    $selected=$selectedregion['district'];
+    $selected=$selectedregion['region'];
 
  
 }
 $delete=mysqli_query($conn,"delete from houses where houseNumber='$id'");
-$updateHouses=mysqli_query($conn,"update regions
-SET marks=marks-1 where name='$selected'");
+if ($delete && !empty($selected)) {
+  syncRegionMarks($conn, $selected);
+}
+$updateHouses = $delete;
 
 if(($delete) && ($updateHouses))
 {

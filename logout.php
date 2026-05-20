@@ -5,7 +5,8 @@
 
 session_unset();
 session_destroy();
-header('location:index.php');
+header('Location: /rental/api/index.php');
+exit;
 
 
 ?>

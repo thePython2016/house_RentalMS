@@ -208,18 +208,28 @@ require 'user-profile.php';
           <label for="password" class="form-label">Region</label>
           <?php
           require 'dbConnection.php';
-          $selectRegions=mysqli_query($conn,"select * from regions"); 
+          $defaultRegions = ['Mwanza', 'Arusha', 'Dar es Salaam', 'Dodoma', 'Kilimanjaro', 'Mbeya', 'Tabora', 'Geita', 'Kagera'];
+          $selectRegions = false;
+          try {
+            $selectRegions = mysqli_query($conn, "SELECT name FROM regions ORDER BY name");
+          } catch (mysqli_sql_exception $e) {
+            $selectRegions = false;
+          }
           ?>
           <select id="region" class="form-select" onchange="updateDistricts()" name="region" required>
                 <option selected disabled>Select a Region</option>
-                <?php 
-
-
-
-foreach($selectRegions as $regions)
-{
-  echo "<option value='$regions[name]'>$regions[name]</option>";
-}
+                <?php
+                if ($selectRegions && mysqli_num_rows($selectRegions) > 0) {
+                  foreach ($selectRegions as $regions) {
+                    $name = htmlspecialchars($regions['name'], ENT_QUOTES, 'UTF-8');
+                    echo "<option value=\"$name\">$name</option>";
+                  }
+                } else {
+                  foreach ($defaultRegions as $name) {
+                    $name = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+                    echo "<option value=\"$name\">$name</option>";
+                  }
+                }
                 ?>
                 <!-- Add other regions as needed -->
             </select>

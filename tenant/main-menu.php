@@ -137,16 +137,7 @@
           
             <!-- Misc -->
    
-            <li class="menu-item">
-              <a
-                href="map.php"
-                target="_blank"
-                class="menu-link"
-              >
-              <i class="fa-solid fa-location-crosshairs font-icon"></i>
-                <div data-i18n="Support">Map</div>
-              </a>
-            </li>
+       
             <li class="menu-item">
               <a
                 href="charts.php"

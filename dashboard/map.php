@@ -132,63 +132,14 @@ if(!isset($_SESSION['id']))
                       <div class="col-md-12 " >
                         <div class="card-body">
                         <div class="container">
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG9NkkUIxpDI796SELfMOz9xL2Nu_6QXw&callback=initMap" async defer></script>
-                     
-<div id="map"></div>
-<style>
-        #map {
-            height: 100vh;
-            width: 100%;   
-        }
-    </style>
 <?php
-
-require "dbconnection.php";
-
-
-$sql = "SELECT name, lat, lon, marks FROM regions";
-$result = $conn->query($sql);
-
-$regions = array();
-
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $regions[] = $row;
-    }
-}
-
-// Close the connection
-$conn->close();
+require 'dbConnection.php';
+require_once dirname(__DIR__) . '/inc/rentalMap.php';
+$mapsApiKey = rentalMapsApiKey();
+$mapsKeyConfigured = rentalMapsApiKeyConfigured();
+$regions = rentalFetchRegionsForMap($conn);
+include dirname(__DIR__) . '/inc/mapView.php';
 ?>
-
-<script>
-    function initMap() {
-
-        const tanzania = { lat: -6.369028, lng: 34.888822 };
-        const map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 6,
-            center: tanzania
-        });
-       
-          const houseIcon = {
-            url: "https://img.icons8.com/office/40/FFBB00/home--v1.png", 
-            scaledSize: new google.maps.Size(30, 30) 
-        };
-
-        var regionsData = <?php echo json_encode($regions); ?>;
-
-        regionsData.forEach(region => {
-            const marker = new google.maps.Marker({
-                position: { lat: parseFloat(region.lat), lng: parseFloat(region.lon) },
-                map: map,
-                 icon: houseIcon,  
-                label: region.marks.toString(),
-                title: `${region.name}: ${region.marks} marks`
-            });
-        });
-    }
-</script>
                       </div>
 
                    

@@ -170,7 +170,7 @@ require 'user-profile.php';
                         . "' data-gender='" . $tenants['gender'] ."'data-lastname='" . $tenants['lastname'] ."' data-kinphone='" 
                         . $tenants['kinPhone'] ."' data-housenumber='" . $tenants['houseNumber']."'
                         data-startdate='" . $tenants['startDate']."' data-enddate='" . $tenants['endDate']."'
-                         data-amount='" . $tenants['amount']."'data-contract='" . $tenants['contract']."' >";
+                         data-amount='" . rentalTenantAmount($tenants) . "'data-contract='" . $tenants['contract']."' >";
                                   ?>
 
 
@@ -188,7 +188,7 @@ require 'user-profile.php';
                                   <td><?php echo $tenants['address']?></td>
                                   <td><?php echo $tenants['startDate']?></td>
                                   <td><?php echo $tenants['endDate']?></td>
-                                  <td><?php echo $tenants['amount']?></td>
+                                  <td><?php echo htmlspecialchars(rentalTenantAmount($tenants), ENT_QUOTES, 'UTF-8'); ?></td>
                                   <td><a href='<?php echo $tenants['contract']?>' download>Download</a></td>
                                  
                                   

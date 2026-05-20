@@ -31,13 +31,17 @@
 
         <?php
         require 'dbConnection.php';
-$selectSent=mysqli_query($conn,"select count(message_id) as sentSMS  from sentsms");
-foreach($selectSent as $sent)
-{
-  $sentSMS=$sent['sentSMS'];
-  echo $sentSMS;
-}
-
+        $sentSMS = 0;
+        try {
+          $selectSent = mysqli_query($conn, "SELECT COUNT(message_id) AS sentSMS FROM sentSMS");
+          if ($selectSent) {
+            $row = mysqli_fetch_assoc($selectSent);
+            $sentSMS = (int) ($row['sentSMS'] ?? 0);
+          }
+        } catch (mysqli_sql_exception $e) {
+          $sentSMS = 0;
+        }
+        echo $sentSMS;
         ?>
         </span> <!-- Example notification count -->
     </div>

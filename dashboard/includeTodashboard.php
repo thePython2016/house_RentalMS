@@ -1,6 +1,5 @@
 <?php
 require 'dbconnection.php';
-$selectTenants=mysqli_query($conn,"select count()");
 
 // Tenants
 $countTenants=mysqli_query($conn,"select count(mobileNumber) as tenantCount from tenants");
