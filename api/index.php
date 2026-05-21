@@ -1,11 +1,19 @@
 <?php
+<?php
 session_start();
 define("BASE_URL", "/");
 
-$db_host = "your_db_host";
-$db_user = "your_db_user";
-$db_pass = "your_db_password";
-$db_name = "your_db_name";
+$conn = new mysqli(
+    getenv('MYSQL_ADDON_HOST'),
+    getenv('MYSQL_ADDON_USER'),
+    getenv('MYSQL_ADDON_PASSWORD'),
+    getenv('MYSQL_ADDON_DB'),
+    (int)getenv('MYSQL_ADDON_PORT')
+);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 if ($conn->connect_error) {
