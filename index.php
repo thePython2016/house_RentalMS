@@ -1,3 +1,3 @@
 <?php
-header('Location: /rental/api/index.php');
+header('Location: /api/index.php');
 exit;
