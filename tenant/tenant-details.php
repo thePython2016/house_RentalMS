@@ -102,7 +102,7 @@ a:hover{
                         <a class="nav-link active" aria-current="page" href="#"><?php echo $_SESSION['id']?></a>
                     </li>
                     <li class="nav-item">
-                    <a class="btn  d-flex" href="../index.php" >Logout</a>
+                    <a class="btn  d-flex" href="/rental/api/index.php" >Logout</a>
                     </li>
             </ul>
         </div>

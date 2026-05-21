@@ -168,7 +168,7 @@ require "user-profile.php";
                           <h3 class="card-title text-nowrap mb-1 annual-collectionnumbertext">
                             <?php
 
-echo $revenueCount;
+echo (int)$revenueCount;
 ?>
                         </h3>
                           
