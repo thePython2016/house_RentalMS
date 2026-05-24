@@ -1,4 +1,3 @@
-
 <?php
 require 'includeTodashboard.php';
 
@@ -536,6 +535,193 @@ echo (int)$revenueCount;
 <!-- Datatable settings -->
 <!-- Notification badge -->
 <script src='alert.js'></script>
+
+    <!-- ========== AI ASSISTANT FLOATING BUTTON ========== -->
+    <style>
+      #ai-assistant-fab {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      #ai-assistant-btn {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #EB8921 0%, #c96a10 100%);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 18px rgba(235, 137, 33, 0.45);
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        position: relative;
+        outline: none;
+      }
+
+      #ai-assistant-btn:hover {
+        transform: translateY(-3px) scale(1.07);
+        box-shadow: 0 8px 28px rgba(235, 137, 33, 0.6);
+      }
+
+      #ai-assistant-btn:active {
+        transform: scale(0.96);
+      }
+
+      #ai-assistant-btn svg {
+        width: 26px;
+        height: 26px;
+        fill: #ffffff;
+      }
+
+      #ai-assistant-btn::before {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 2px solid rgba(235, 137, 33, 0.45);
+        animation: ai-pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes ai-pulse {
+        0%, 100% { transform: scale(1);    opacity: 0.65; }
+        50%       { transform: scale(1.18); opacity: 0;    }
+      }
+
+      #ai-assistant-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: #EB8921;
+        letter-spacing: 0.3px;
+        background: #fff;
+        padding: 3px 10px;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        white-space: nowrap;
+        user-select: none;
+      }
+
+      #ai-chat-modal {
+        display: none;
+        position: fixed;
+        bottom: 110px;
+        right: 28px;
+        z-index: 9998;
+        width: 340px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+        flex-direction: column;
+        animation: ai-slide-in 0.25s ease;
+      }
+
+      @keyframes ai-slide-in {
+        from { opacity: 0; transform: translateY(16px) scale(0.97); }
+        to   { opacity: 1; transform: translateY(0)   scale(1);    }
+      }
+
+      #ai-chat-modal.open { display: flex; }
+
+      .ai-chat-header {
+        background: linear-gradient(135deg, #EB8921 0%, #c96a10 100%);
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #fff;
+      }
+
+      .ai-chat-header-title {
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .ai-chat-header-close {
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 22px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+        outline: none;
+      }
+
+      .ai-chat-header-close:hover { color: #fff; }
+
+      .ai-chat-body {
+        padding: 16px;
+        font-size: 13px;
+        color: #444;
+        background: #fff9f3;
+        min-height: 80px;
+      }
+
+      .ai-chat-body p { margin: 0 0 8px; }
+
+      .ai-chat-footer {
+        padding: 12px 16px;
+        border-top: 1px solid #f0e0cc;
+        font-size: 12px;
+        color: #999;
+        text-align: center;
+        background: #fff;
+      }
+    </style>
+
+    <div id="ai-assistant-fab">
+      <div id="ai-chat-modal">
+        <div class="ai-chat-header">
+          <div class="ai-chat-header-title">
+            <!-- Robot / AI agent icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18" height="18">
+              <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h3a3 3 0 0 1 3 3v1h.5a1.5 1.5 0 0 1 0 3H19v1a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-1h-.5a1.5 1.5 0 0 1 0-3H5v-1a3 3 0 0 1 3-3h3V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2zm-2 9a1.5 1.5 0 0 0 0 3 1.5 1.5 0 0 0 0-3zm4 0a1.5 1.5 0 0 0 0 3 1.5 1.5 0 0 0 0-3zm-4 4.5h4v1H10v-1z"/>
+            </svg>
+            AI Assistant
+          </div>
+          <button class="ai-chat-header-close" onclick="toggleAiChat()" aria-label="Close">&times;</button>
+        </div>
+        <div class="ai-chat-body">
+          <p>👋 Hello! I'm your <strong>AI Assistant</strong>.</p>
+          <p>I can help you review tenant records, track revenue trends, and answer questions about your property data.</p>
+        </div>
+        <div class="ai-chat-footer">🔒 Powered by Property Intelligence</div>
+      </div>
+
+      <button id="ai-assistant-btn" onclick="toggleAiChat()" title="AI Assistant" aria-label="Open AI Assistant">
+        <!-- Circuit-brain / AI chip icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 2H7v2H5a2 2 0 0 0-2 2v2H1v2h2v2H1v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V2h-2v2H9V2zm-2 4h10v10H7V6zm2 2v6h6V8H9zm2 2h2v2h-2v-2z"/>
+        </svg>
+      </button>
+      <span id="ai-assistant-label">AI Assistant</span>
+    </div>
+
+    <script>
+      function toggleAiChat() {
+        var modal = document.getElementById('ai-chat-modal');
+        modal.classList.toggle('open');
+      }
+
+      document.addEventListener('click', function(e) {
+        var fab   = document.getElementById('ai-assistant-fab');
+        var modal = document.getElementById('ai-chat-modal');
+        if (modal.classList.contains('open') && !fab.contains(e.target)) {
+          modal.classList.remove('open');
+        }
+      });
+    </script>
+    <!-- ========== / AI ASSISTANT FLOATING BUTTON ========== -->
 
 </body>
   </body>
